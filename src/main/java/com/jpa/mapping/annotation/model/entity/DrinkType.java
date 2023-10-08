@@ -1,2 +1,4 @@
-package com.jpa.mapping.annotation.model.entity;public class DrinkType {
+package com.jpa.mapping.annotation.model.entity;
+public enum DrinkType {
+    COFFEE, NON_COFFEE
 }

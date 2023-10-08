@@ -4,7 +4,6 @@ import javax.persistence.Column;
 
 public class DrinkRegistDTO {
 
-    private int drinkCode;
 
     private String drinkName;
 
@@ -27,9 +26,6 @@ public class DrinkRegistDTO {
         this.drinkCalorie = drinkCalorie;
     }
 
-    public int getDrinkCode() {
-        return drinkCode;
-    }
 
     public String getDrinkName() {
         return drinkName;
@@ -58,7 +54,6 @@ public class DrinkRegistDTO {
     @Override
     public String toString() {
         return "DrinkRegistDTO{" +
-                "drinkCode=" + drinkCode +
                 ", drinkName='" + drinkName + '\'' +
                 ", drinkPrice=" + drinkPrice +
                 ", drinkType=" + drinkType +

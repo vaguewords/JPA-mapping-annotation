@@ -1,5 +1,9 @@
-package com.jpa.mapping.annotation.model.entity;
+package com.jpa.mapping.annotation.model.service;
 
+import com.jpa.mapping.annotation.model.entity.Drink;
+import com.jpa.mapping.annotation.model.entity.DrinkRegistDTO;
+import com.jpa.mapping.annotation.model.entity.DrinkRepository;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,8 +25,6 @@ public class DrinkRegistService {
     @Transactional
     public void registDrink(DrinkRegistDTO drinkRegistDTO) {
         Drink drink = new Drink(
-                drinkRegistDTO.getDrinkCode(),
-                drinkRegistDTO.getDrinkCode(),
                 drinkRegistDTO.getDrinkName(),
                 drinkRegistDTO.getDrinkPrice(),
                 drinkRegistDTO.getDrinkType(),
