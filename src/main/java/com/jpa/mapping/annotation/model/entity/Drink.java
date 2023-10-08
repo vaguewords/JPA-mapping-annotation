@@ -3,27 +3,28 @@ package com.jpa.mapping.annotation.model.entity;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "DRINK")
 public class Drink {
     @Id
-    @Column
+    @Column(name = "DRINK_CODE")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int drinkCode;
-    @Column
+    @Column(name = "DRINK_NAME", columnDefinition = "VARCHAR(50)")
     private String drinkName;
-    @Column
+    @Column(name = "DRINK_PRICE")
     private int drinkPrice;
-    @Column
-    private DrinkType drinkType;
-    @Column
+    @Column(name = "DRINK_TYPE", columnDefinition = "VARCHAR(50)")
+    private String drinkType;
+    @Column(name = "DRINK_SUGAR")
     private int drinkSugar;
-    @Column
+    @Column(name = "DRINK_FAT")
     private int drinkFat;
-    @Column
+    @Column(name = "DRINK_CALORIE")
     private int drinkCalorie;
 
     public Drink() {}
 
-    public Drink(String drinkName, int drinkPrice, DrinkType drinkType, int drinkSugar, int drinkFat, int drinkCalorie) {
+    public Drink(String drinkName, int drinkPrice, String drinkType, int drinkSugar, int drinkFat, int drinkCalorie) {
         this.drinkName = drinkName;
         this.drinkPrice = drinkPrice;
         this.drinkType = drinkType;
@@ -40,7 +41,7 @@ public class Drink {
         this.drinkPrice = drinkPrice;
     }
 
-    public void setDrinkType(DrinkType drinkType) {
+    public void setDrinkType(String drinkType) {
         this.drinkType = drinkType;
     }
 

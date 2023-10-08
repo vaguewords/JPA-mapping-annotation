@@ -1,6 +1,4 @@
-package com.jpa.mapping.annotation.model.entity;
-
-import javax.persistence.Column;
+package com.jpa.mapping.annotation.model.dto;
 
 public class DrinkRegistDTO {
 
@@ -9,7 +7,7 @@ public class DrinkRegistDTO {
 
     private int drinkPrice;
 
-    private DrinkType drinkType;
+    private String drinkType;
 
     private int drinkSugar;
 
@@ -17,7 +15,7 @@ public class DrinkRegistDTO {
 
     private int drinkCalorie;
 
-    public DrinkRegistDTO(String drinkName, int drinkPrice, DrinkType drinkType, int drinkSugar, int drinkFat, int drinkCalorie) {
+    public DrinkRegistDTO(String drinkName, int drinkPrice, String drinkType, int drinkSugar, int drinkFat, int drinkCalorie) {
         this.drinkName = drinkName;
         this.drinkPrice = drinkPrice;
         this.drinkType = drinkType;
@@ -35,7 +33,7 @@ public class DrinkRegistDTO {
         return drinkPrice;
     }
 
-    public DrinkType getDrinkType() {
+    public String getDrinkType() {
         return drinkType;
     }
 
