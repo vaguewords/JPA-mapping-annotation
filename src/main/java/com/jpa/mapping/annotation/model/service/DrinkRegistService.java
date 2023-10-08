@@ -2,7 +2,7 @@ package com.jpa.mapping.annotation.model.service;
 
 import com.jpa.mapping.annotation.model.entity.Drink;
 import com.jpa.mapping.annotation.model.entity.DrinkRegistDTO;
-import com.jpa.mapping.annotation.model.entity.DrinkRepository;
+import com.jpa.mapping.annotation.model.dao.DrinkRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

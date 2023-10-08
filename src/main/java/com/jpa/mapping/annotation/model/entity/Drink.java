@@ -21,7 +21,7 @@ public class Drink {
     @Column
     private int drinkCalorie;
 
-    protected Drink() {}
+    public Drink() {}
 
     public Drink(String drinkName, int drinkPrice, DrinkType drinkType, int drinkSugar, int drinkFat, int drinkCalorie) {
         this.drinkName = drinkName;
