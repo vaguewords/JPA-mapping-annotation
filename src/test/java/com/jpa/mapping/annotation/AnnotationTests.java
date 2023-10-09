@@ -3,6 +3,7 @@ package com.jpa.mapping.annotation;
 import com.jpa.mapping.annotation.model.EntityManagerCRUD;
 import com.jpa.mapping.annotation.model.dto.DrinkRegistDTO;
 import com.jpa.mapping.annotation.model.dao.DrinkRepository;
+import com.jpa.mapping.annotation.model.entity.DrinkType;
 import com.jpa.mapping.annotation.model.service.DrinkRegistService;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
@@ -65,7 +66,7 @@ public class AnnotationTests {
     @DisplayName("음료 테이블 생성")
     @ParameterizedTest
     @MethodSource("newDrink")
-    void testCreateDrinkTable(String drinkName, int drinkPrice, String drinkType, int drinkCalorie, int drinkSugar, int drinkFat) {
+    void testCreateDrinkTable(String drinkName, int drinkPrice, DrinkType drinkType, int drinkCalorie, int drinkSugar, int drinkFat) {
 
         DrinkRegistDTO drinkRegistDTO = new DrinkRegistDTO(
                 drinkName,

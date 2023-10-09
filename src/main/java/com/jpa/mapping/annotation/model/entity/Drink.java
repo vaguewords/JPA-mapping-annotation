@@ -13,8 +13,9 @@ public class Drink {
     private String drinkName;
     @Column(name = "DRINK_PRICE")
     private int drinkPrice;
-    @Column(name = "DRINK_TYPE", columnDefinition = "VARCHAR(50)")
-    private String drinkType;
+    @Column(name = "DRINK_TYPE")
+    @Enumerated(EnumType.STRING)
+    private DrinkType drinkType;
     @Column(name = "DRINK_SUGAR")
     private int drinkSugar;
     @Column(name = "DRINK_FAT")
@@ -24,7 +25,7 @@ public class Drink {
 
     public Drink() {}
 
-    public Drink(String drinkName, int drinkPrice, String drinkType, int drinkSugar, int drinkFat, int drinkCalorie) {
+    public Drink(String drinkName, int drinkPrice, DrinkType drinkType, int drinkSugar, int drinkFat, int drinkCalorie) {
         this.drinkName = drinkName;
         this.drinkPrice = drinkPrice;
         this.drinkType = drinkType;
@@ -41,7 +42,7 @@ public class Drink {
         this.drinkPrice = drinkPrice;
     }
 
-    public void setDrinkType(String drinkType) {
+    public void setDrinkType(DrinkType drinkType) {
         this.drinkType = drinkType;
     }
 

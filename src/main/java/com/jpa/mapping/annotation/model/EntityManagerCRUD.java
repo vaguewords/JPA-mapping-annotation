@@ -5,6 +5,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
 import com.jpa.mapping.annotation.manager.EntityManagerGenerator;
+import com.jpa.mapping.annotation.model.entity.DrinkType;
 
 public class EntityManagerCRUD {
 
@@ -19,7 +20,7 @@ public class EntityManagerCRUD {
         return manager;
     }
 
-    public Long saveAndReturnAllCount(String drinkName, int drinkPrice, String drinkType, int drinkSugar, int drinkFat, int drinkCalorie) {
+    public Long saveAndReturnAllCount(String drinkName, int drinkPrice, DrinkType drinkType, int drinkSugar, int drinkFat, int drinkCalorie) {
         manager = EntityManagerGenerator.getManagerInstance();
 
         EntityTransaction transaction = manager.getTransaction();

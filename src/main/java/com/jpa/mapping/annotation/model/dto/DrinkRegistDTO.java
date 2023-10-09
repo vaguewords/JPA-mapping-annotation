@@ -1,5 +1,7 @@
 package com.jpa.mapping.annotation.model.dto;
 
+import com.jpa.mapping.annotation.model.entity.DrinkType;
+
 public class DrinkRegistDTO {
 
 
@@ -7,7 +9,7 @@ public class DrinkRegistDTO {
 
     private int drinkPrice;
 
-    private String drinkType;
+    private DrinkType drinkType;
 
     private int drinkSugar;
 
@@ -15,7 +17,7 @@ public class DrinkRegistDTO {
 
     private int drinkCalorie;
 
-    public DrinkRegistDTO(String drinkName, int drinkPrice, String drinkType, int drinkSugar, int drinkFat, int drinkCalorie) {
+    public DrinkRegistDTO(String drinkName, int drinkPrice, DrinkType drinkType, int drinkSugar, int drinkFat, int drinkCalorie) {
         this.drinkName = drinkName;
         this.drinkPrice = drinkPrice;
         this.drinkType = drinkType;
@@ -33,7 +35,7 @@ public class DrinkRegistDTO {
         return drinkPrice;
     }
 
-    public String getDrinkType() {
+    public DrinkType getDrinkType() {
         return drinkType;
     }
 
